@@ -1,0 +1,31 @@
+server:
+  port: 84
+
+
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:1111
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      datasource: #增加数据源配置 把sentinel流控规则持久化进nacos
+        ds1:
+          nacos:
+            server-addr: localhost:1111
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
+service-url:
+  nacos-user-service: http://nacos-payment-provider
+
+#开启sentinel对feign的支持
+feign:
+  sentinel:
+    enabled: true

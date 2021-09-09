@@ -1,0 +1,14 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true

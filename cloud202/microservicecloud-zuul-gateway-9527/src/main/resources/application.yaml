@@ -1,0 +1,31 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: microservicecloud-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true
+
+zuul:
+  ignored-services: cloud-payment-service
+  routes: # 路由映射配置
+    mypayment.serviceId: cloud-payment-service
+    mypayment.path: /weixin/**
+  prefix: /api
+  #对该顾虑器进行拦截开关
+  PreLogFilter:
+    pre:
+      disable: true
+# 开启查看路由的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'

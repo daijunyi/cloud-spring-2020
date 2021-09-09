@@ -1,0 +1,27 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:daijunyi/spring-learn-config.git
+          search-paths:
+            - spring-learn-config
+      label: main
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka7001.com:7001/eureka,http://www.eureka7002.com:7002/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
