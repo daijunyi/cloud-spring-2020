@@ -23,7 +23,9 @@
         <module name="cloudalibaba-config-nacos-client3377" />
         <module name="cloud-zuul-gateway9527" />
         <module name="cloud-consumer-hystrix-dashboard9001" />
+        <module name="seata-order-service2003" />
         <module name="cloud-provider-payment8004" />
+        <module name="seata-order-service2001" />
         <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloudalibaba-consumer-nacos-order84" />
         <module name="cloudalibaba-consumer-nacos-order83" />
@@ -34,6 +36,7 @@
         <module name="microservicecloud-zuul-gateway-9527" />
         <module name="cloud-consumer-order80" />
         <module name="cloudalibaba-sentinel-service8401" />
+        <module name="seata-order-service2002" />
         <module name="cloud-consumerconsul-order80" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-config-client-3377" />
