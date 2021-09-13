@@ -7,8 +7,6 @@ import java.math.BigDecimal;
 
 @Mapper
 public interface AccountDao {
-
-
     /**
      * 扣减账户余额
      */
